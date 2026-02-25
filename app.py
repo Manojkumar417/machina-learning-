@@ -8,8 +8,7 @@ app = Flask(__name__)
 
 
 # Save the scaler object fitted on the ptbdb dataset
-joblib.dump(scaler, 'ptbdb_scaler.joblib')
-
+scaler = joblib.load('ptbdb_scaler.joblib')
 print("StandardScaler object for PTBDB dataset saved successfully as 'ptbdb_scaler.joblib'.")
 # Define paths for the model and scaler
 MODEL_PATH = 'ptbdb_logistic_regression_model.joblib'
